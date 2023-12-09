@@ -1,5 +1,5 @@
 # backend build (api server)
-FROM golang:1.15-alpine AS api-build
+FROM golang:1.21-alpine AS api-build
 RUN apk add --no-cache --update bash dep make git curl g++
 
 ARG RELEASE=prod
