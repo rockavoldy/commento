@@ -1,5 +1,5 @@
 # backend build (api server)
-FROM golang:1.15-alpine AS api-build
+FROM golang:1.17-alpine3.13 AS api-build
 RUN apk add --no-cache --update bash dep make git curl g++
 
 ARG RELEASE=prod
@@ -9,7 +9,7 @@ RUN make ${RELEASE} -j$(($(nproc) + 1))
 
 
 # frontend build (html, js, css, images)
-FROM node:12-alpine AS frontend-build
+FROM node:12-alpine3.13 AS frontend-build
 RUN apk add --no-cache --update bash make python2 g++
 
 ARG RELEASE=prod
