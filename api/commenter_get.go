@@ -1,7 +1,5 @@
 package main
 
-import ()
-
 var commentersRowColumns string = `
 	commenters.commenterHex,
 	commenters.email,
