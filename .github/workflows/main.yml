@@ -8,12 +8,6 @@ on:
 jobs:
   docker:
     runs-on: ubuntu-latest
-    # strategy:
-    #   fail-fast: true
-      # matrix:
-        # goarch: [amd64,arm64]
-        # goos: [linux]
-        # docker_target: [ 'x86_64:linux/amd64', 'arm:linux/arm64,linux/arm/v7,linux/arm/v8']
     steps:
       -
         name: Checkout
@@ -35,6 +29,6 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           push: true
           tags: rockavoldy/commento:latest
