@@ -1,8 +1,6 @@
-module gitlab.com/commento/commento/api
+module github.com/rockavoldy/commento/api
 
 go 1.17
-
-// toolchain go1.21.0
 
 require (
 	github.com/adtac/go-akismet v0.0.0-20181220032308-0ca9e1023047
