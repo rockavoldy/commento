@@ -23,7 +23,7 @@ func commenterPhotoHandler(w http.ResponseWriter, r *http.Request) {
 			url += "?sz=38"
 		} else if strings.Contains(url, "=s") {
 			newUrl := strings.Split(url, "=")
-			url += newUrl[0] + "=s38"
+			url = newUrl[0] + "=s38"
 		}
 	} else if c.Provider == "github" {
 		url += "&s=38"
