@@ -28,6 +28,7 @@ jobs:
       - name: Install deps
         run: |
           cd api
+          go mod tidy
           test -z $(go fmt)
 
       - name: Test
